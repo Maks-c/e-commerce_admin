@@ -1,9 +1,16 @@
-import {CircleLoader} from 'react-spinners'
+import {PacmanLoader} from 'react-spinners'
 
-export default function Spinner(){
+export default function Spinner({fullWidth}){
+    if(fullWidth){
+       return(
+           <div className={'w-full flex justify-center'}>
+               <PacmanLoader color={'#1e3a8a'} speedMultiplier={2} />
+           </div>
+       )
+    }
 
     return (
-        <CircleLoader color={'#1e3a8a'} speedMultiplier={2}/>
+        <PacmanLoader color={'#1e3a8a'} speedMultiplier={2} />
     )
 }
 
