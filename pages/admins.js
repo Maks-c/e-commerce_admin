@@ -6,6 +6,7 @@ import Spinner from "../components/Spinner";
 import {prettyDate} from "../lib/date";
 
 function AdminsPage({swal}){
+    console.log(swal)
     const [email, setEmail] = useState('')
     const [adminEmails, setAdminEmails] = useState([])
     const [isLoading, setIsLoading] = useState(false)
